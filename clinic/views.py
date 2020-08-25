@@ -1,11 +1,11 @@
 from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import render
-from clinic.models import clinic
+from clinic.models import Clinic
 
 def home(request):
     return render(request, 'home.html')
 
-def clinicregform(request):
+def clinicreg(request):
     return render(request, 'clinicreg.html')
 
 def clinicloginform(request):
@@ -20,6 +20,9 @@ def clinicupdateform(request):
 def clinicdeleteform(request):
     return render(request, 'clinicdeleteform.html')
 
+def searchclinic(request):
+    return render(request, 'searchclinic.html')
+
 def clinicregprocess(request):
     clinicID = request.GET.get('n1')
     pswd = request.GET.get('n2')
@@ -32,10 +35,10 @@ def clinicregprocess(request):
     noofdoctors = request.GET.get('n9')
 
     try:
-       rec=clinic.objects.get(ID=clinicID)
+       rec=Clinic.objects.get(clinicid=clinicID)
        return render(request,'clinicregerror.html')
     except ObjectDoesNotExist:
-        c1=clinic(clinicID,pswd,clinicname,cityname,pincode,timein,timeout,mobile,noofdoctors)
+        c1=Clinic(clinicID,pswd,clinicname,cityname,pincode,timein,timeout,mobile,noofdoctors)
         c1.save()
         return render(request,'clinicregsuccess.html')
 
@@ -43,7 +46,7 @@ def clinicshowprocess(request):
     clinicid=request.GET.get('n1')
 
     try:
-       clin=clinic.objects.get(ID=clinicid)
+       clin=Clinic.objects.get(cliniid=clinicid)
        return render(request,"showclinic.html",{'clinics':clin})
     except ObjectDoesNotExist:
         return render(request,'clinicnotfound.html')
@@ -53,20 +56,20 @@ def cliniclogin(request):
     pswd=request.GET.get('n2')
 
     try:
-       clin=clinic.objects.get(ID=clinicid,Pswd=pswd)
+       clin=Clinic.objects.get(clinicid=clinicid,pswd=pswd)
        return render(request,'clinicloginsuccess.html')
     except ObjectDoesNotExist:
         return render(request,'clinicloginerror.html')
 
 def displayallclinics(request):
-    clin=clinic.objects.all()
+    clin=Clinic.objects.all()
     return render(request,"showallclinics.html",{'clinics':clin})
 
 def dispclinicbycity(request):
     clinicity=request.GET.get('n4')
 
     try:
-       clin=clinic.objects.get(cityname=clinicity)
+       clin=Clinic.objects.get(cityname=clinicity)
        return render(request,"showclinic.html",{'clinic':clin})
     except ObjectDoesNotExist:
         return render(request,'clinicnotfound.html')
@@ -75,8 +78,8 @@ def dispclinicbyname(request):
     clinicname=request.GET.get('n3')
 
     try:
-       clin=clinic.objects.get(clinic=clinicname)
-       return render(request,"showclinc.html",{'clinic':clin})
+       clin=Clinic.objects.get(clinic=clinicname)
+       return render(request,"showclinic.html",{'clinic':clin})
     except ObjectDoesNotExist:
         return render(request,'clinicnotfound.html')
 
@@ -84,7 +87,7 @@ def cliniceditprocess(request):
     clinicid = request.GET.get('n1')
 
     try:
-       clin=clinic.objects.get(ID=clinicid)
+       clin=Clinic.objects.get(ID=clinicid)
        return render(request,"clinicedit.html",{'clinic':clin})
     except ObjectDoesNotExist:
         return render(request,'clinicnotfound.html')
@@ -100,7 +103,7 @@ def doctupdate(request):
     newmobile = request.GET.get('n8')
     newnoofdoctors = request.GET.get('n9')
 
-    c=clinic.objects.get(ID=clinicID)
+    c=Clinic.objects.get(clinicid=clinicID)
     c.pswd=newpswd
     c.name=newclinicname
     c.cityname= newcityname
@@ -117,7 +120,7 @@ def clinicdelete(request):
     clinicID=request.GET.get('n1')
 
     try:
-        c=clinic.objects.get(ID=clinicID)
+        c=Clinic.objects.get(clinicid=clinicID)
         c.delete()
         return render(request,'clinicdeletesuccess.html')
     except ObjectDoesNotExist:

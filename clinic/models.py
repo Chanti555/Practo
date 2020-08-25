@@ -1,6 +1,5 @@
 from django.db import models
 
-
 class Clinic(models.Model):
     clinicid = models.CharField(max_length=10, primary_key=True)
     pswd = models.CharField(max_length=20)
@@ -9,7 +8,7 @@ class Clinic(models.Model):
     pincode = models.IntegerField()
     timein = models.TimeField()
     timeout = models.TimeField()
-    phone = models.IntegerField()
+    mobile = models.IntegerField()
     noofdoctors = models.IntegerField()
 
 
