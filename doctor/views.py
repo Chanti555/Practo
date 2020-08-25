@@ -6,9 +6,17 @@ def home(request):
     return render(request, 'home.html')
 
 
+<<<<<<< HEAD
+def doctloginform(request):
+    return render(request,'doclogin.html')
+
+def doctshowform(request):
+    return render(request,'docshowform.html')
+=======
 def docreg(request):
     return render(request, 'docreg.html')
 
+>>>>>>> fd696c62ff85c0050f7bf1f30d92eed6dfddf91f
 
 def doclogin(request):
     return render(request, 'doclogin.html')
