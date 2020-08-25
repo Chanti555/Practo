@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Doctor(models.Model):
+class doctor(models.Model):
     doctid = models.CharField(max_length=10, primary_key=True)
     pswd = models.CharField(max_length=20)
     name = models.CharField(max_length=20)

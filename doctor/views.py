@@ -1,26 +1,30 @@
 from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import render
-from doctor.models import Doctor
+from doctor.models import doctor
 
 def home(request):
-    return render(request,'home.html')
+    return render(request, 'home.html')
 
-def doctregform(request):
-    return render(request,'docreg.html')
 
-def doctloginform(request):
-    return render(request,'doctlogin.html')
+def docreg(request):
+    return render(request, 'docreg.html')
 
-def doctshowform(request):
-    return render(request,'doctshowform.html')
 
-def doctupdateform(request):
-    return render(request,'doctupdateform.html')
+def doclogin(request):
+    return render(request, 'doclogin.html')
 
-def doctdeleteform(request):
-    return render(request,'doctdeleteform.html')
 
-def doctregprocess(request):
+def docshowform(request):
+    return render(request, 'docshowform.html')
+
+
+def docupdateform(request):
+    return render(request,'docupdateform.html')
+
+def docdeleteform(request):
+    return render(request,'docdeleteform.html')
+
+def docregprocess(request):
     docID=request.GET.get('n1')
     pswd=request.GET.get('n2')
     name=request.GET.get('n3')
