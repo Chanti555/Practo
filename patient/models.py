@@ -1,5 +1,6 @@
 from django.db import models
-# Create your models here.
+
+
 class Patient(models.Model):
     mobilenumber = models.IntegerField(primary_key=True)
     pswd = models.CharField(max_length=20)
@@ -10,6 +11,8 @@ class Patient(models.Model):
     weight = models.IntegerField()
     gender = models.CharField(max_length=10)
     previousrecord = models.IntegerField()
-    covidsymptoms= models.IntegerField()
-    def __str__(self):
-        return str(self.mobilenumber)
+    covidsymptoms = models.IntegerField()
+
+
+def __str__(self):
+    return str(self.mobilenumber)
