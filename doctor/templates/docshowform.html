@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+       *{   margin:5px;     padding:5px;    }
+   </style>
+</head>
+<body>
+<form action="{% url 'docshowform'%}">
+    <table>
+        <tr>
+            <td>
+                Enter Doctor ID to show data
+            </td>
+            <td>
+                <input type="number" name="n1">
+            </td>
+        </tr>
+
+        <tr>
+            <td><input type="Submit" value="SHOW"></td>
+        </tr>
+    </table>
+</form>
+<a href="{% url 'home'%}">home</a>
+</body>
+</html>

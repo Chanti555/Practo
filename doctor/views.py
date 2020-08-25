@@ -1,6 +1,6 @@
 from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import render
-from doctors.models import Doctor
+from doctor.models import Doctor
 
 def home(request):
     return render(request,'home.html')
