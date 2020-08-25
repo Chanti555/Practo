@@ -5,7 +5,9 @@
        *{   margin:5px;     padding:5px;    }
    </style>
 </head>
-<body bgcolor="pinkcoral">
+{%extends "base.html"%}
+{%block content%}
+<body>
 <h1>Clinic Registration Form</h1>
 <form action="{% url ''%}">
     <table>
@@ -50,5 +52,6 @@
         </tr>
     </table>
 </form>
+{%endblock%}
 </body>
 </html>
