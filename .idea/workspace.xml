@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a7fdb405-3568-4a6a-9484-d73eaf9837c5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appointment/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appointment/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appointment/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appointment/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appointment/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appointment/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appointment/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic/templates/clinicreg.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic/templates/searchclinic.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/covid/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/covid/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/covid/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/covid/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/covid/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/covid/templates/covid-19.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/covid/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/covid/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor/templates/doclogin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor/templates/docloginerror.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor/templates/docloginsuccess.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor/templates/docreg.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor/templates/docregerror.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor/templates/docregsuccess.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor/templates/searchdoc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myadmin/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myadmin/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myadmin/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myadmin/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myadmin/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myadmin/templates/adminreg.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myadmin/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myadmin/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patient/templates/patientreg.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/practo/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/practo/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/practo/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Practo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Practo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clinic/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/clinic/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clinic/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/clinic/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clinic/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/clinic/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/doctor/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/doctor/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/doctor/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/patient/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/patient/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/patient/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/practo/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/practo/urls.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="0" y="0" key="SettingsEditor" timestamp="1598366179154">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="0" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1598366179154" />
+  </component>
+</project>

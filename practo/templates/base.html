@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ARA</title>
+</head>
+
+<header style="background-color:#054BD1; color:#F7D504; text-align:center; font-family:cooper black; font-size:34px">
+    ARA
+</header>
+
+<br>
+<hr>
+   |<a href="{% url 'adminreg'%}"> ADMIN </a>|
+   <a href="{% url 'docreg'%}"> DOCTOR </a>|
+   <a href="{% url 'patientreg'%}"> PATIENT </a>|
+   <a href="{% url 'clinicreg'%}"> CLINIC </a>|
+   <a href="{% url 'covid'%}"> COVID-19 </a>|
+   <a href="{% url 'searchdoc'%}"> SEARCH DOCTOR </a>|
+   <a href="{% url 'searchclinic'%}"> SEARCH CLINICS </a>|
+<hr>
+{%block content%}
+{%endblock%}
+
+<footer style="background-color:#054BD1; color:#F7D504; text-align:center; font-family:cooper black; font-size:20px" >
+    copyright2020, ARA. All Rights Reserved.
+</footer>
+
+<hr>
+</html>

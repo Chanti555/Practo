@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+       *{   margin:5px;     padding:5px;    }
+   </style>
+</head>
+<body>
+{%extends "base.html"%}
+{%block content%}
+<h1>Patient Signup Form</h1>
+<form>
+    <table>
+        <tr>
+            <td>
+                NAME
+            </td>
+            <td>
+                <input type="text" name="n1">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                PASSWORD
+            </td>
+            <td>
+                <input type="password" name="n2">
+            </td>
+        </tr>
+
+        <tr>
+             <td>
+                 MOBILE NUMBER
+             </td>
+             <td>
+                <input type="number" name="n3">
+             </td>
+        </tr>
+
+        <tr>
+            <td>
+                DISEASE
+            </td>
+            <td>
+                <input type="text" name="n4">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                SYMPTOMS
+            </td>
+            <td>
+                <textarea rows="3" cols=10" name="Description"></textarea>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                AGE
+            </td>
+            <td>
+                <input type="number" name="n6">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                WEIGHT(in kg)
+            </td>
+            <td>
+                <input type="number" name="n7">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                GENDER
+            </td>
+            <td>
+                <input type="text" name="n8">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                COVID-19 SYMPTOMS
+            </td>
+            <td>
+                <textarea rows="3" cols="10" name="Description"></textarea>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="Submit" value="SignUp" align="center">
+            </td>
+        </tr>
+
+    </table>
+</form>
+{%endblock%}
+</body>
+</html>

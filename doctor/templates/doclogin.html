@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+       *{   margin:5px;     padding:5px;    }
+   </style>
+</head>
+<body>
+<h1>Doctor Signin Form</h1>
+<form action="{% url 'loginprocess'%}">
+    <table>
+        <tr>
+           <td>
+                Doctor ID
+            </td>
+            <td>
+                <input type="number" name="n1">
+            </td>
+        </tr>
+
+        <tr>
+             <td>
+                Password
+            </td>
+            <td>
+                <input type="password" name="n2">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="Submit" value=SignUp>
+            </td>
+        </tr>
+    </table>
+</form>
+{%endblock%}
+</body>
+</html>

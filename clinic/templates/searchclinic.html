@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clinic Search</title>
+</head>
+<body>
+{%extends "base.html"%}
+{%block content%}
+<h1>Find your CLINIC here:</h1>
+<form>
+<table border="2px" align="center" cellpadding="5px" cellspacing="5px" >
+    <tr>
+        <th>ClinicID</th><th>Clinicname</th><th>Cityname</th><th>ClinicPincode</th><th>PhoneNo.</th><th>Time-IN</th><th>Time-OUT</th><th>No.ofDoctors</th>
+    </tr>
+    <tr>
+       <td>{{c.id}}</td><td>{{c.name}}</td><td>{{c.city}}</td><td>{{c.pincode}}</td><td>{{c.phone.no}}</td><td>{{c.time-in}}</td><td>{{c.time-out}}</td><td>{{c.no.ofdoctors}}</td>
+    </tr>
+</table>
+</form>
+{%endblock%}
+</body>
+</html>
