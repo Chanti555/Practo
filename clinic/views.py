@@ -1,35 +1,35 @@
 from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import render
-from clinics.models import Clinic
+from clinic.models import clinic
 
 def home(request):
-    return render(request,'home.html')
+    return render(request, 'home.html')
 
 def clinicregform(request):
-    return render(request,'clinicreg.html')
+    return render(request, 'clinicreg.html')
 
 def clinicloginform(request):
-    return render(request,'cliniclogin.html')
+    return render(request, 'cliniclogin.html')
 
 def clinicshowform(request):
-    return render(request,'clinicshowform.html')
+    return render(request, 'clinicshowform.html')
 
 def clinicupdateform(request):
-    return render(request,'clinicupdateform.html')
+    return render(request, 'clinicupdateform.html')
 
 def clinicdeleteform(request):
-    return render(request,'clinicdeleteform.html')
+    return render(request, 'clinicdeleteform.html')
 
 def clinicregprocess(request):
-    clinicID=request.GET.get('n1')
-    pswd=request.GET.get('n2')
-    clinicname=request.GET.get('n3')
-    cityname=request.GET.get('n4')
-    pincode=request.GET.get('n5')
-    timein=request.GET.get('n6')
-    timeout=request.GET.get('n7')
-    mobile=request.GET.get('n8')
-    noofdoctors=request.GET.get('n9')
+    clinicID = request.GET.get('n1')
+    pswd = request.GET.get('n2')
+    clinicname = request.GET.get('n3')
+    cityname = request.GET.get('n4')
+    pincode = request.GET.get('n5')
+    timein = request.GET.get('n6')
+    timeout = request.GET.get('n7')
+    mobile = request.GET.get('n8')
+    noofdoctors = request.GET.get('n9')
 
     try:
        rec=clinic.objects.get(ID=clinicID)

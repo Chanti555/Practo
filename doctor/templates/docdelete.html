@@ -6,25 +6,23 @@
    </style>
 </head>
 <body>
+{%extends "base.html"%}
+{%block content%}
 <h1 style="background-color:#273DA4; color:#F7D504; text-align:center; font-family:cooper black; font-size:34px">
-    Doctor Details
+    Doctor Delete Form
 </h1>
-<form action="{% url 'docshowform'%}">
+<form action="{% url 'docdeleteform'%}">
     <table>
         <tr>
-            <td>
-                Enter Doctor ID to show data
-            </td>
-            <td>
-                <input type="number" name="n1">
-            </td>
+            <td>Enter Doctor ID to Delete data</td>
+            <td><input type="text" name="n1"></td>
         </tr>
 
         <tr>
-            <td><input type="Submit" value="SHOW"></td>
+            <td><input type="Submit" value="DELETE"></td>
         </tr>
     </table>
 </form>
-<a href="{% url 'home'%}">home</a>
+{%endblock%}
 </body>
 </html>
