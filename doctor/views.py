@@ -9,10 +9,10 @@ def doctregform(request):
     return render(request,'docreg.html')
 
 def doctloginform(request):
-    return render(request,'doctlogin.html')
+    return render(request,'doclogin.html')
 
 def doctshowform(request):
-    return render(request,'doctshowform.html')
+    return render(request,'docshowform.html')
 
 def doctupdateform(request):
     return render(request,'doctupdateform.html')
