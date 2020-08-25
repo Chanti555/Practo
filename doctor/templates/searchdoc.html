@@ -10,14 +10,17 @@
 <h1 style="background-color:#273DA4; color:#F7D504; text-align:center; font-family:cooper black; font-size:34px">
     Find Your Doctor here:
 </h1>
+
+<form action="{% url 'searchdoc'%}">
 <table border="2px" align="center" cellpadding="5px" cellspacing="5px" >
     <tr>
         <th>Clinicname</th><th>Cityname</th><th>PhoneNo.</th><th>Time-IN</th><th>Time-OUT</th><th>No.ofDoctors</th>
     </tr>
     <tr>
-       <td>{{d.clinicname}}</td><td>{{d.city}}</td><td>{{d.phone-no}}</td><td>{{d.time-in}}</td><td>{{d.time-out}}</td><td>{{d.no.of.doctors}}</td>
+       <td>{{d.clinicname}}</td><td>{{d.city}}</td><td>{{d.mobile}}</td><td>{{d.timein}}</td><td>{{d.timeout}}</td><td>{{d.noofdoctors}}</td>
     </tr>
 </table>
+</form>
 {%endblock%}
 </body>
 </html>

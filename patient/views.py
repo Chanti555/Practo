@@ -1,21 +1,21 @@
 from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import render
-from patients.models import Patient
+from patient.models import Patient
 
 def home(request):
     return render(request,'home.html')
 
-def patregform(request):
-    return render(request,'patreg.html')
+def patientreg(request):
+    return render(request,'patientreg.html')
 
 def patloginform(request):
-    return render(request,'patlogin.html')
+    return render(request,'patientlogin.html')
 
 def patshowform(request):
-    return render(request,'patshowform.html')
+    return render(request,'patientshowform.html')
 
 def patupdateform(request):
-    return render(request,'patupdateform.html')
+    return render(request,'patientupdateform.html')
 
 def patregprocess(request):
     patID=request.GET.get('n1')
@@ -31,44 +31,44 @@ def patregprocess(request):
     covidsymptoms= request.GET.get('n11')
 
     try:
-       rec=patient.objects.get(ID=patID)
+       rec=Patient.objects.get(patid=patID)
        return render(request,'patregerror.html')
     except ObjectDoesNotExist:
-        p1=patient(patID,name,pswd,mobile,disease,symptoms,age,weight,gender,previousrecord,covidsymptoms)
+        p1=Patient(patID,name,pswd,mobile,disease,symptoms,age,weight,gender,previousrecord,covidsymptoms)
         p1.save()
-        return render(request,'doctregsuccess.html')
+        return render(request,'patientregsuccess.html')
 
 def doctshowprocess(request):
     patid=request.GET.get('n1')
 
     try:
-       pat=patient.objects.get(ID=patid)
-       return render(request,"showpat.html",{'pats':pat})
+       pat=Patient.objects.get(patid=patid)
+       return render(request,"showpatient.html",{'pats':pat})
     except ObjectDoesNotExist:
-        return render(request,'patnotfound.html')
+        return render(request,'patientnotfound.html')
 
 def patloginprocess(request):
     patid=request.GET.get('n1')
     pswd=request.GET.get('n3')
 
     try:
-       pat=patient.objects.get(ID=patid,Pswd=pswd)
-       return render(request,'patloginsuccess.html')
+       pat=Patient.objects.get(patid=patid,p=pswd)
+       return render(request,'patientloginsuccess.html')
     except ObjectDoesNotExist:
-        return render(request,'patloginerror.html')
+        return render(request,'patientloginerror.html')
 
 def displayallpatients(request):
-    pat=patient.objects.all()
-    return render(request,"showallpat.html",{'pats':pat})
+    pat=Patient.objects.all()
+    return render(request,"showallpatient.html",{'pats':pat})
 
 def pateditprocess(request):
     patid = request.GET.get('n1')
 
     try:
-       pat=patient.objects.get(ID=patid)
-       return render(request,"patedit.html",{'pats':pat})
+       pat=Patient.objects.get(ID=patid)
+       return render(request,"patientedit.html",{'pats':pat})
     except ObjectDoesNotExist:
-        return render(request,'patnotfound.html')
+        return render(request,'patientnotfound.html')
 
 def doctupdate(request):
     patID=request.GET.get('n1')
@@ -83,7 +83,7 @@ def doctupdate(request):
     newpreviousrecord=request.GET.get('n10')
     newcovidsymptoms= request.GET.get('n11')
 
-    p=patient.objects.get(ID=patID)
+    p=Patient.objects.get(patid=patID)
     p.name=newname
     p.pswd=newpswd
     p.mobile = newmobile
@@ -96,4 +96,4 @@ def doctupdate(request):
     p.covidsymptoms=newcovidsymptoms
 
     p.save()
-    return render(request,"patupdatesuccess.html")
+    return render(request,"patientupdatesuccess.html")

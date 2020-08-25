@@ -8,10 +8,12 @@
 <body>
 {%extends "base.html"%}
 {%block content%}
-<form>
+
 <h1 style="background-color:#273DA4; color:#F7D504; text-align:center; font-family:cooper black; font-size:34px">
     Doctor Signin Form
 </h1>
+
+<form action="{% url 'docloginform'%}">
     <table>
         <tr>
            <td>

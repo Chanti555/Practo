@@ -1,30 +1,27 @@
 from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import render
-from doctor.models import doctor
+from doctor.models import Doctor
 
 def home(request):
     return render(request, 'home.html')
 
-
-<<<<<<< HEAD
 def doctloginform(request):
     return render(request,'doclogin.html')
 
 def doctshowform(request):
     return render(request,'docshowform.html')
-=======
+
 def docreg(request):
     return render(request, 'docreg.html')
-
->>>>>>> fd696c62ff85c0050f7bf1f30d92eed6dfddf91f
 
 def doclogin(request):
     return render(request, 'doclogin.html')
 
-
 def docshowform(request):
     return render(request, 'docshowform.html')
 
+def searchdoc(request):
+    return render(request, 'searchdoc.html')
 
 def docupdateform(request):
     return render(request,'docupdateform.html')
@@ -46,62 +43,62 @@ def docregprocess(request):
     about = request.GET.get('n11')
 
     try:
-       rec=doctor.objects.get(ID=docID)
-       return render(request,'doctregerror.html')
+       rec=Doctor.objects.get(doctid=docID)
+       return render(request,'docregerror.html')
     except ObjectDoesNotExist:
-        d1=doctor(docID,pswd,name,speciality,exp,checkintime,checkouttime,clinicname,consultfee,mobile,about)
+        d1=Doctor(docID,pswd,name,speciality,exp,checkintime,checkouttime,clinicname,consultfee,mobile,about)
         d1.save()
-        return render(request,'doctregsuccess.html')
+        return render(request,'docregsuccess.html')
 
 def doctshowprocess(request):
     docid=request.GET.get('n1')
 
     try:
-       doc=doctor.objects.get(ID=docid)
-       return render(request,"showdoct.html",{'docs':doc})
+       doc=Doctor.objects.get(doctid=docid)
+       return render(request,"showdoc.html",{'docs':doc})
     except ObjectDoesNotExist:
-        return render(request,'doctnotfound.html')
+        return render(request,'docnotfound.html')
 
 def doctlogin(request):
     docid=request.GET.get('n1')
     pswd=request.GET.get('n2')
 
     try:
-       doc=doctor.objects.get(ID=docid,Pswd=pswd)
-       return render(request,'doctloginsuccess.html')
+       doc=Doctor.objects.get(doctid=docid,pswd=pswd)
+       return render(request,'docloginsuccess.html')
     except ObjectDoesNotExist:
-        return render(request,'doctloginerror.html')
+        return render(request,'docloginerror.html')
 
 def displayalldoctors(request):
-    doc=doctor.objects.all()
-    return render(request,"showalldoct.html",{'docs':doc})
+    doc=Doctor.objects.all()
+    return render(request,"showalldoc.html",{'docs':doc})
 
 def dispdoctbyname(request):
     docname=request.GET.get('n3')
 
     try:
-       doc=doctor.objects.get(name=docname)
-       return render(request,"showdoct.html",{'doc':docname})
+       doc=Doctor.objects.get(name=docname)
+       return render(request,"showdoc.html",{'doc':docname})
     except ObjectDoesNotExist:
-        return render(request,'doctnotfound.html')
+        return render(request,'docnotfound.html')
 
 def dispdoctbyclinic(request):
     docclinic=request.GET.get('n8')
 
     try:
-       doc=doctor.objects.get(clinic=docclinic)
-       return render(request,"showdoct.html",{'doc':docclinic})
+       doc=Doctor.objects.get(clinicname=docclinic)
+       return render(request,"showdoc.html",{'doc':docclinic})
     except ObjectDoesNotExist:
-        return render(request,'doctnotfound.html')
+        return render(request,'docnotfound.html')
 
 def docteditprocess(request):
     docid = request.GET.get('n1')
 
     try:
-       doc=doctor.objects.get(ID=docid)
-       return render(request,"doctedit.html",{'doc':doc})
+       doc=Doctor.objects.get(docid=docid)
+       return render(request,"docedit.html",{'doc':doc})
     except ObjectDoesNotExist:
-        return render(request,'doctnotfound.html')
+        return render(request,'docnotfound.html')
 
 def doctupdate(request):
     docID = request.GET.get('n1')
@@ -116,7 +113,7 @@ def doctupdate(request):
     newmobile = request.GET.get('n10')
     newabout = request.GET.get('n11')
 
-    d=doctor.objects.get(ID=docID)
+    d=Doctor.objects.get(docid=docID)
     d.pswd=newpswd
     d.name=newname
     d.speciality = newspeciality
@@ -134,8 +131,8 @@ def doctdelete(request):
     docID=request.GET.get('n1')
 
     try:
-        d=doctor.objects.get(ID=docID)
+        d=Doctor.objects.get(docid=docID)
         d.delete()
-        return render(request,'doctdeletesuccess.html')
+        return render(request,'docdeletesuccess.html')
     except ObjectDoesNotExist:
-        return render(request,'doctnotfound.html')
+        return render(request,'docnotfound.html')
