@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find your Doctor here</title>
+</head>
+<body>
+{%extends "base.html"%}
+{%block content%}
+<h1>Find Your Doctor here:</h1>
+<table border="2px" align="center" cellpadding="5px" cellspacing="5px" >
+    <tr>
+        <th>Clinicname</th><th>Cityname</th><th>PhoneNo.</th><th>Time-IN</th><th>Time-OUT</th><th>No.ofDoctors</th>
+    </tr>
+    <tr>
+       <td>{{d.clinicname}}</td><td>{{d.city}}</td><td>{{d.phone-no}}</td><td>{{d.time-in}}</td><td>{{d.time-out}}</td><td>{{d.no.of.doctors}}</td>
+    </tr>
+</table>
+{%endblock%}
+</body>
+</html>

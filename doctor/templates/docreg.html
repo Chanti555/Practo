@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+       *{   margin:5px;     padding:5px;    }
+   </style>
+</head>
+
+<body>
+{%extends "base.html"%}
+{%block content%}
+<h1>Doctor Signup Form</h1>
+
+<form action="{% url '...'%}">
+    <table>
+        <tr>
+            <td>
+                Doctor ID
+            </td>
+            <td>
+                <input type="number" name="n1">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Password
+            </td>
+            <td>
+                <input type="password" name="n2">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Name
+            </td>
+            <td>
+                <input type="text" name="n3">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Speciality
+            </td>
+            <td>
+                <input type="text" name="n4">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Experience
+            </td>
+            <td>
+                <input type="number" name="n5">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Check-in Time
+            </td>
+            <td>
+                <input type="time" name="n6">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Check-out Time
+            </td>
+            <td>
+                <input type="time" name="n7">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Clinic Name
+            </td>
+
+            <td>
+                <select name="drop1" id="Clinics">
+                    <option value="1">Select Clinic</option>
+                    <option value="2">Apollo</option>
+                    <option value="3">Aster</option>
+                    <option value="4">Yashoda</option>
+                    <option value="5">KIMS</option>
+                    <option value="6">NMC</option>
+                    <option value="7">Ahli</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Consultation Fee
+            </td>
+            <td><input type="number" name="n9"/></td>
+        </tr>
+
+        <tr>
+            <td>
+                Mobile Number
+            </td>
+            <td><input type="text" name="n10"/></td>
+        </tr>
+
+        <tr>
+            <td>
+                About Me
+            </td>
+            <td><textarea rows="3" cols="15" name="Description"></textarea></td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="Submit" value="SignUp" align="center">
+            </td>
+        </tr>
+
+    </table>
+</form>
+{%endblock%}
+</body>
+</html>
