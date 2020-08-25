@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'doctor',
     'patient',
     'myadmin',
+    'appointment'
 
 ]
 

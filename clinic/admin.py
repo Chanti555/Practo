@@ -1,3 +1,3 @@
 from django.contrib import admin
-
-# Register your models here.
+from clinic.models import Clinic
+admin.site.register(Clinic)

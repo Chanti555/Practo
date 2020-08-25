@@ -1,3 +1,13 @@
 from django.db import models
-
-# Create your models here.
+class Clinic(models.Model):
+    clinicid= models.CharField(max_length=10 , primary_key=True)
+    pswd = models.CharField(max_length=20)
+    clinicname = models.CharField(max_length=20)
+    cityname= models.CharField(max_length=20)
+    pincode= models.IntegerField()
+    timein = models.TimeField()
+    timeout = models.TimeField()
+    phone = models.IntegerField()
+    noofdoctors = models.IntegerField()
+    def __str__(self):
+        return str(self.clinicid)
