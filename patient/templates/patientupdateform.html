@@ -9,13 +9,13 @@
 {%extends "base.html"%}
 {%block content%}
 <h1 style="background-color:#273DA4; color:#F7D504; text-align:center; font-family:cooper black; font-size:34px">
-    Doctor Details
+    Patient Update Form
 </h1>
-<form action="{% url 'docshowform'%}">
+<form action="{% url 'patienteditprocess'%}">
     <table>
-        <tr>
+        <td>
             <td>
-                Enter Doctor ID to show data
+                Enter Patient ID to edit data
             </td>
             <td>
                 <input type="number" name="n1">
@@ -23,7 +23,9 @@
         </tr>
 
         <tr>
-            <td><input type="Submit" value="SHOW"></td>
+            <td>
+                <input type="Submit" value="EDIT">
+            </td>
         </tr>
     </table>
 </form>

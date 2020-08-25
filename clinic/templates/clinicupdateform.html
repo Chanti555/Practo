@@ -9,23 +9,24 @@
 {%extends "base.html"%}
 {%block content%}
 <h1 style="background-color:#273DA4; color:#F7D504; text-align:center; font-family:cooper black; font-size:34px">
-    Doctor Details
+    Doctor Update Form
 </h1>
-<form action="{% url 'docshowform'%}">
+<form action="{% url 'cliniceditprocess'%}">
     <table>
         <tr>
             <td>
-                Enter Doctor ID to show data
+                Enter Clinic ID to edit data
             </td>
+        </tr>
+        <tr>
             <td>
                 <input type="number" name="n1">
             </td>
         </tr>
-
-        <tr>
-            <td><input type="Submit" value="SHOW"></td>
-        </tr>
     </table>
+    <p>
+        <input type="Submit" value="EDIT">
+    </p>
 </form>
 {%endblock%}
 </body>

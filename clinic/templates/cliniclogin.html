@@ -8,14 +8,14 @@
 <body>
 {%extends "base.html"%}
 {%block content%}
+<form>
 <h1 style="background-color:#273DA4; color:#F7D504; text-align:center; font-family:cooper black; font-size:34px">
-    Doctor Details
+    Clinic Signin Form
 </h1>
-<form action="{% url 'docshowform'%}">
     <table>
         <tr>
-            <td>
-                Enter Doctor ID to show data
+           <td>
+                Clinic ID
             </td>
             <td>
                 <input type="number" name="n1">
@@ -23,7 +23,18 @@
         </tr>
 
         <tr>
-            <td><input type="Submit" value="SHOW"></td>
+             <td>
+                Password
+            </td>
+            <td>
+                <input type="password" name="n2">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="Submit" value=SignUp>
+            </td>
         </tr>
     </table>
 </form>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+       *{   margin:5px;     padding:5px;    }
+   </style>
+</head>
+<body>
+{%extends "base.html"%}
+{%block content%}
+<h1 style="background-color:#273DA4; color:#F7D504; text-align:center; font-family:cooper black; font-size:34px">
+    Patient Delete Form
+</h1>
+<form action="{% url 'deleteemp'%}">
+    <p>
+        <label>Enter emp ID to Delete data</label>
+        <input type="text" name="n1">
+    </p>
+    <p>
+        <input type="Submit" value="DELETE">
+    </p>
+</form>
+{%endblock%}
+</body>
+</html>
