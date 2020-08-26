@@ -5,55 +5,59 @@
        *{   margin:5px;     padding:5px;    }
    </style>
 </head>
+
 {%extends "base.html"%}
 {%block content%}
-<body bgcolor="azure">
-<h1 style="background-color:#273DA4; color:#F7D504; text-align:center; font-family:cooper black; font-size:34px">
-    Clinic Registration Form
+
+<body>
+
+<h1 style=" color:#EEB90A; font-family:Comic Sans MS; font-size:20px">
+    CLINIC REGISTRATION FORM
 </h1>
-<form>
+<form action="{% url 'clinicregprocess'%}">
     <table>
         <tr>
             <td>CLINIC ID</td>
-            <td><input type="number" name="n1"/></td>
+            <td><input type="number" name="n1" required></td>
         </tr>
         <tr>
             <td>PASSWORD</td>
-            <td><input type="password" name="n2"/></td>
+            <td><input type="password" name="n2" required></td>
         </tr>
         <tr>
             <td>CLINIC NAME</td>
-            <td><input type="text" name="n3"/></td>
+            <td><input type="text" name="n3" required></td>
         </tr>
         <tr>
             <td>CITY</td>
-            <td><input type="text" name="n4"/></td>
+            <td><input type="text" name="n4" required></td>
         </tr>
         <tr>
             <td>PINCODE</td>
-            <td><input type="number" name="n5"/></td>
+            <td><input type="number" name="n5" required></td>
         </tr>
         <tr>
             <td>CHECK_IN TIME</td>
-            <td><input type="time" name="n6"/></td>
+            <td><input type="time" name="n6" required></td>
         </tr>
         <tr>
             <td>CHECK_OUT TIME</td>
-            <td><input type="time" name="n7"/></td>
+            <td><input type="time" name="n7" required></td>
         </tr>
         <tr>
             <td>PHONE NUMBER</td>
-            <td><input type="number" name="n8"/></td>
+            <td><input type="number" name="n8" required></td>
         </tr>
         <tr>
             <td>NUMBER OF DOCTORS</td>
-            <td><input type="number" name="n9"/></td>
+            <td><input type="number" name="n9" required></td>
         </tr>
         <tr>
-            <td><input type="Submit" value="SignUp" align="center"></td>
+            <td><input type="Submit" value="SIGNUP"></td>
         </tr>
     </table>
 </form>
+
 {%endblock%}
 </body>
 </html>

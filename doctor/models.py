@@ -11,8 +11,7 @@ class Doctor(models.Model):
     clinicname = models.CharField(max_length=30)
     consultfee = models.IntegerField()
     mobile = models.IntegerField()
-    about = models.IntegerField()
-
+    about = models.CharField(max_length=50)
 
 def __str__(self):
-    return str(self.doctid)
+    return str(self.name)

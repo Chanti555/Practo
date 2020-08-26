@@ -5,7 +5,7 @@ from patient.models import Patient
 def home(request):
     return render(request,'home.html')
 
-def patientreg(request):
+def patreg(request):
     return render(request,'patientreg.html')
 
 def patloginform(request):
@@ -38,7 +38,7 @@ def patregprocess(request):
         p1.save()
         return render(request,'patientregsuccess.html')
 
-def doctshowprocess(request):
+def patshowprocess(request):
     patid=request.GET.get('n1')
 
     try:
@@ -70,7 +70,7 @@ def pateditprocess(request):
     except ObjectDoesNotExist:
         return render(request,'patientnotfound.html')
 
-def doctupdate(request):
+def patupdate(request):
     patID=request.GET.get('n1')
     newname=request.GET.get('n2')
     newpswd=request.GET.get('n3')
@@ -97,3 +97,13 @@ def doctupdate(request):
 
     p.save()
     return render(request,"patientupdatesuccess.html")
+
+def patdelete(request):
+    patID=request.GET.get('n1')
+
+    try:
+        p=Patient.objects.get(patID=patID)
+        p.delete()
+        return render(request,'patdeletesuccess.html')
+    except ObjectDoesNotExist:
+        return render(request,'patnotfound.html')

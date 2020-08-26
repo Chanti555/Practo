@@ -92,7 +92,7 @@ def cliniceditprocess(request):
     except ObjectDoesNotExist:
         return render(request,'clinicnotfound.html')
 
-def doctupdate(request):
+def clinicupdate(request):
     clinicID = request.GET.get('n1')
     newpswd = request.GET.get('n2')
     newclinicname = request.GET.get('n3')

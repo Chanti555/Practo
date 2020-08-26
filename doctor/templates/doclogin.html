@@ -9,33 +9,33 @@
 {%extends "base.html"%}
 {%block content%}
 
-<h1 style="background-color:#273DA4; color:#F7D504; text-align:center; font-family:cooper black; font-size:34px">
-    Doctor Signin Form
+<h1 style=" color:#E3950C; font-family:Comic Sans MS; font-size:20px">
+    DOCTOR SIGNIN FORM
 </h1>
 
-<form action="{% url 'docloginform'%}">
+<form action="{% url 'doclogin'%}">
     <table>
         <tr>
            <td>
-                Doctor ID
+                DOCTOR ID
             </td>
             <td>
-                <input type="number" name="n1">
+                <input type="number" name="n1" required>
             </td>
         </tr>
 
         <tr>
              <td>
-                Password
+                PASSWORD
             </td>
             <td>
-                <input type="password" name="n2">
+                <input type="password" name="n2" required>
             </td>
         </tr>
 
         <tr>
             <td>
-                <input type="Submit" value=SignUp>
+                <input type="Submit" value=SIGNUP>
             </td>
         </tr>
     </table>
