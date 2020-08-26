@@ -26,6 +26,7 @@
 
 </head>
 
+
 <body>
 
 {%extends "base.html"%}
@@ -35,29 +36,29 @@
     FIND YOUR CLINIC HERE:
 </h1>
 <form action="{% url 'searchclinic'%}">
-<table border="2px" align="center" cellpadding="5px" cellspacing="5px" >
-    <tr>
-        <th>CLINIC ID</th>
-        <th>CLINIC NAME</th>
-        <th>CITY NAME</th>
-        <th>PINCODE</th>
-        <th>MOBILE</th>
-        <th>TIME-IN</th>
-        <th>TIME-OUT</th>
-        <th>NO.OF.DOCTORS</th>
-    </tr>
-    <tr>
-       <td>{{c.id}}</td>
-        <td>{{c.name}}</td>
-        <td>{{c.city}}</td>
-        <td>{{c.pincode}}</td>
-        <td>{{c.mobile}}</td>
-        <td>{{c.timein}}</td>
-        <td>{{c.timeout}}</td>
-        <td>{{c.noofdoctors}}</td>
-    </tr>
-</table>
+    <table border="2px" align="center" cellpadding="5px" cellspacing="5px" >
+        <tr>
+            <th>CLINIC ID</th>
+            <th>CITY NAME</th>
+            <th>PINCODE</th>
+            <th>MOBILE</th>
+            <th>TIME-IN</th>
+            <th>TIME-OUT</th>
+            <th>NO.OF.DOCTORS</th>
+        </tr>
+        <tr>
+            <td>{{c.id}}</td>
+            <td>{{c.name}}</td>
+            <td>{{c.city}}</td>
+            <td>{{c.pincode}}</td>
+            <td>{{c.mobile}}</td>
+            <td>{{c.timein}}</td>
+            <td>{{c.timeout}}</td>
+            <td>{{c.noofdoctors}}</td>
+        </tr>
+    </table>
 </form>
-{%endblock%}
+
 </body>
+{%endblock%}
 </html>
