@@ -13,6 +13,5 @@ class Patient(models.Model):
     gender = models.CharField(max_length=10)
     previousrecord = models.CharField(max_length=50)
     covidsymptoms = models.CharField(max_length=50)
-
-def __str__(self):
-    return str(self.name)
+    def __str__(self):
+        return str(self.name)

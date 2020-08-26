@@ -10,7 +10,5 @@ class Clinic(models.Model):
     timeout = models.TimeField()
     mobile = models.IntegerField()
     noofdoctors = models.IntegerField()
-
-
-def __str__(self):
+    def __str__(self):
         return str(self.clinicname)
