@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+       *{   margin:5px;     padding:5px;    }
+   </style>
+</head>
+
+<body>
+
+{%extends "base.html"%}
+{%block content%}
+
+<h1 style=" color:#F6BE0E; font-family:Comic Sans MS; font-size:20px">
+    PATIENT DETAILS
+</h1>
+<form action="{% url 'patshowprocess'%}">
+    <table>
+        <tr>
+            <td>
+                PATIENT ID
+            </td>
+            <td>
+                <input type="text" name="n1" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="Submit" value="SHOW">
+            </td>
+    </table>
+</form>
+{%endblock%}
+</body>
+</html>
