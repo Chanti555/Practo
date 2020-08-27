@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PATIENTS</title>
+
+         <style>
+        table,th,td
+        {border: 1px solid black;
+        border-collapse:collapse;
+        }
+
+        #t1 tr:nth-child(even)
+        {background-color:#fff;
+        }
+
+        #t1 tr:nth-child(odd)
+        {background-color:#fff;
+        }
+
+        #t1 th
+        {color:white;
+        background-color:#119CDF;
+        }
+    </style>
+</head>
+
+<body>
+
+{%extends "adminbase.html"%}
+{%block content%}
+
+<h1 style=" color:#E3950C; font-family:Comic Sans MS; font-size:20px">
+   DOCTORS LIST
+</h1>
+
+<form action="{% url 'allpatients'%}">
+<table border="2px" align="center" cellpadding="5px" cellspacing="5px" >
+    <tr>
+        <th> ID </th>
+        <th> NAME </th>
+        <th> PASSWORD </th>
+        <th> MOBILE </th>
+        <th> DISEASE </th>
+        <th> SYMPTOMS</th>
+        <th> AGE </th>
+        <th> WEIGHT </th>
+        <th> GENDER </th>
+        <th> PREVIOUS RECORD </th>
+        <th> COVID SYMPTOMS </th>
+    </tr>
+
+    <tr>
+       <td>{{p.patid}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.pswd}}</td>
+        <td>{{p.mobile}}</td>
+        <td>{{p.disease}}</td>
+        <td>{{p.symptoms}}</td>
+        <td>{{p.age}}</td>
+        <td>{{p.weight}}</td>
+        <td>{{p.gender}}</td>
+        <td>{{p.previousrecord}}</td>
+        <td>{{p.covidsymptoms}}</td>
+    </tr>
+</table>
+</form>
+{%endblock%}
+</body>
+</html>

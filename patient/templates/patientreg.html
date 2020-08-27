@@ -5,100 +5,77 @@
        *{   margin:5px;     padding:5px;    }
    </style>
 </head>
+
 <body>
+
 {%extends "base.html"%}
 {%block content%}
+
 <h1 style=" color:#F6BE0E; font-family:Comic Sans MS; font-size:20px">
     PATIENT REGISTRATION FORM
 </h1>
 <form action="{% url 'patregprocess'%}">
     <table>
         <tr>
-            <td>
-                NAME
-            </td>
-            <td>
-                <input type="text" name="n1" required>
-            </td>
+            <td> PATIENT ID </td>
+            <td><input type="text" name="n1" required></td>
         </tr>
 
         <tr>
-            <td>
-                PASSWORD
-            </td>
-            <td>
-                <input type="password" name="n2" required>
-            </td>
+            <td> NAME </td>
+            <td><input type="text" name="n2" required></td>
         </tr>
 
         <tr>
-             <td>
-                 MOBILE NUMBER
-             </td>
-             <td>
-                <input type="number" name="n3" required>
-             </td>
+            <td> PASSWORD </td>
+            <td><input type="password" name="n3" required></td>
         </tr>
 
         <tr>
-            <td>
-                DISEASE
-            </td>
-            <td>
-                <input type="text" name="n4" required>
-            </td>
+             <td> MOBILE NUMBER </td>
+             <td><input type="number" name="n4" required></td>
         </tr>
 
         <tr>
-            <td>
-                SYMPTOMS
-            </td>
-            <td>
-                <textarea rows="3" cols=10" name="Description" required></textarea>
-            </td>
+            <td> DISEASE </td>
+            <td><input type="text" name="n5" required></td>
         </tr>
 
         <tr>
-            <td>
-                AGE
-            </td>
-            <td>
-                <input type="number" name="n6" required>
-            </td>
+            <td>SYMPTOMS</td>
+            <td><textarea name="'n6" rows="3" cols=10" name="Description" required></textarea></td>
         </tr>
 
         <tr>
-            <td>
-                WEIGHT(in kg)
-            </td>
-            <td>
-                <input type="number" name="n7" required>
-            </td>
+            <td> AGE </td>
+            <td> <input type="number" name="n7" required> </td>
         </tr>
 
         <tr>
+            <td> WEIGHT(in kg) </td>
+            <td> <input type="number" name="n8" required> </td>
+        </tr>
+
+        <tr>
+            <td> GENDER </td>
             <td>
-                GENDER
-            </td>
-            <td>
-                <input type="radio" name="n8" value="Male" required>Male
+                <input type="radio" name="n9" value="Male" required>Male
                 <input type="radio" name="n9" value="Female" required>Female
             </td>
         </tr>
 
-        <tr>
-            <td>
-                COVID-19 SYMPTOMS
-            </td>
-            <td>
-                <textarea rows="3" cols="10" name="Description" required></textarea>
-            </td>
+         <tr>
+            <td> PREVIOUS RECORD </td>
+            <td><textarea name="n10" rows="3" cols="10" name="Description" required></textarea></td>
         </tr>
 
         <tr>
-            <td>
-                <input type="Submit" value="SIGNUP">
-            </td>
+            <td> COVID-19 SYMPTOMS </td>
+            <td><textarea name="n11" rows="3" cols="10" name="Description" required></textarea></td>
+        </tr>
+
+        <tr>
+            <td><input type="Submit" value="SIGNUP"></td>
         </tr>
 
     </table>

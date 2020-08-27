@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LOGIN SUCCESSFUL</title>
+</head>
+
+<header style="background-color:#210A75; color:#F7D504; text-align:center; font-family:Showcard Gothic; font-size:34px">
+    ARA
+</header>
+
+<body>
+
+<hr>
+   |<a href="{% url 'home'%}"> HOME </a>|
+   <a href="{% url 'alldoctors'%}"> ALL DOCTORS </a>|
+   <a href="{% url 'allpatients'%}"> ALL PATIENTS </a>|
+   <a href="{% url 'allclinics'%}"> ALL CLINICS </a>|
+<hr>
+
+{%block content%}
+{%endblock%}
+
+<br><br><br><br><br><br><br><br><br><br><br>
+
+<footer style="background-color:#210DB2; color:#F7D504; text-align:center; font-family:Corbel; font-size:15px" >
+    copyright2020, ARA. All Rights Reserved.
+</footer>
+
+<hr>
+</body>
+</html>

@@ -15,6 +15,10 @@ urlpatterns = [
     url(r'adminreg/', adminreg, name='adminreg'),
     url(r'adminregprocess/', adminregprocess, name='adminregprocess'),
 
+    url(r'alldoctors/', alldoctors, name='alldoctors'),
+    url(r'allpatients/', allpatients, name='allpatients'),
+    url(r'allclinics/', allclinics, name='allclinics'),
+
     url(r'docreg/', docreg, name='docreg'),
     url(r'docregprocess/', docregprocess, name='docregprocess'),
     url(r'docloginform/', docloginform, name='docloginform'),
@@ -54,7 +58,7 @@ urlpatterns = [
     url(r'clinicdelete/', clinicdelete, name='clinicdelete'),
     url(r'displayallclinics/', displayallclinics, name='displayallclinics'),
     url(r'dispclinicbycity/', dispclinicbycity, name='dispclinicbycity'),
-    url(r'dispclinicbycity/', dispclinicbycity, name='dispclinicbycity'),
+
 
     url(r'covid/', covid, name='covid'),
 

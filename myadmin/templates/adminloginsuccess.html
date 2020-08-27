@@ -2,15 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>LOGIN SUCCESSFUL</title>
 </head>
 
 <body>
+<<<<<<< HEAD
 {%extends "base.html"%}
 {%block content%}
 <h1 style=" color:green; font-family:Comic Sans MS; font-size:20px">
     ADMIN LOGIN SUCCESSFUL
 </h1>
+=======
+
+{%extends "adminbase.html"%}
+{%block content%}
+
+<h1 style=" color:green; font-family:Comic Sans MS; font-size:20px">
+    ADMIN LOGIN SUCCESSFUL
+</h1>
+
+<h1 style=" color:blue; font-family:corbel; font-size:20px">
+    <a href="{% url 'home'%}">LOGOUT</a>
+</h1>
+
+>>>>>>> 99af73ac8fd25aa946511e62922a0e8d98144b74
 {%endblock%}
 </body>
 </html>

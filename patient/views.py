@@ -2,9 +2,6 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import render
 from patient.models import Patient
 
-def home(request):
-    return render(request,'home.html')
-
 def patreg(request):
     return render(request,'patientreg.html')
 
@@ -34,7 +31,7 @@ def patregprocess(request):
        rec=Patient.objects.get(patid=patID)
        return render(request,'patregerror.html')
     except ObjectDoesNotExist:
-        p1=Patient(patID,name,pswd,mobile,disease,symptoms,age,weight,gender,previousrecord,covidsymptoms)
+        p1=Patient(patid=patID,name=name,pswd=pswd,mobile=mobile,disease=disease,symptoms=symptoms,age=age,weight=weight,gender=gender,previousrecord=previousrecord,covidsymptoms=covidsymptoms)
         p1.save()
         return render(request,'patientregsuccess.html')
 
@@ -48,11 +45,11 @@ def patshowprocess(request):
         return render(request,'patientnotfound.html')
 
 def patloginprocess(request):
-    patid=request.GET.get('n1')
+    patname=request.GET.get('n2')
     pswd=request.GET.get('n3')
 
     try:
-       pat=Patient.objects.get(patid=patid,p=pswd)
+       pat=Patient.objects.get(name=patname,pswd=pswd)
        return render(request,'patientloginsuccess.html')
     except ObjectDoesNotExist:
         return render(request,'patientloginerror.html')
@@ -62,10 +59,10 @@ def displayallpatients(request):
     return render(request,"showallpatient.html",{'pats':pat})
 
 def pateditprocess(request):
-    patid = request.GET.get('n1')
+    patname = request.GET.get('n1')
 
     try:
-       pat=Patient.objects.get(ID=patid)
+       pat=Patient.objects.get(name=patname)
        return render(request,"patientedit.html",{'pats':pat})
     except ObjectDoesNotExist:
         return render(request,'patientnotfound.html')

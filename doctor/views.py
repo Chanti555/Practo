@@ -2,9 +2,6 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import render
 from doctor.models import Doctor
 
-def home(request):
-    return render(request, 'home.html')
-
 def docshowform(request):
     return render(request,'docshowform.html')
 

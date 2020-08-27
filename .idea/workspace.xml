@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7fdb405-3568-4a6a-9484-d73eaf9837c5" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/patient/templates/patientloginerror.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/patient/templates/patientloginsuccess.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Practo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Practo.iml" afterDir="false" />
@@ -28,10 +29,40 @@
       <change beforePath="$PROJECT_DIR$/doctor/templates/docloginsuccess.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctor/templates/docloginsuccess.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doctor/templates/docregerror.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctor/templates/docregerror.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doctor/templates/docregsuccess.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctor/templates/docregsuccess.html" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/myadmin/templates/adminbase.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myadmin/templates/adminloginerror.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myadmin/templates/adminloginsuccess.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myadmin/templates/showallclinics.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myadmin/templates/showalldoctors.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myadmin/templates/showallpatients.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appointment/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/appointment/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clinic/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/clinic/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clinic/migrations/0002_auto_20200826_1505.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clinic/templates/cliniclogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/clinic/templates/cliniclogin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clinic/templates/clinicreg.html" beforeDir="false" afterPath="$PROJECT_DIR$/clinic/templates/clinicreg.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clinic/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/clinic/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/doctor/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor/migrations/0002_auto_20200826_1451.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/doctor/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor/templates/docloginsuccess.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctor/templates/docloginsuccess.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor/templates/docreg.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctor/templates/docreg.html" afterDir="false" />
+>>>>>>> 99af73ac8fd25aa946511e62922a0e8d98144b74
       <change beforePath="$PROJECT_DIR$/doctor/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/doctor/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myadmin/templates/adminloginerror.html" beforeDir="false" afterPath="$PROJECT_DIR$/myadmin/templates/adminloginerror.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myadmin/templates/adminloginsuccess.html" beforeDir="false" afterPath="$PROJECT_DIR$/myadmin/templates/adminloginsuccess.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myadmin/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/myadmin/views.py" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/patient/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/patient/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient/migrations/0002_auto_20200826_1503.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient/templates/patientreg.html" beforeDir="false" afterPath="$PROJECT_DIR$/patient/templates/patientreg.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/patient/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practo/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/practo/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/practo/urls.py" afterDir="false" />
+>>>>>>> 99af73ac8fd25aa946511e62922a0e8d98144b74
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +73,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -58,6 +90,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
@@ -70,6 +103,7 @@
       <recent name="C:\Users\dell\AppData\Local\Programs\Python\Python38-32\Scripts\practo\myadmin\templates" />
     </key>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>

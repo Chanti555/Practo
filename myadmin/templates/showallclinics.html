@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CLINICS</title>
+
+         <style>
+        table,th,td
+        {border: 1px solid black;
+        border-collapse:collapse;
+        }
+
+        #t1 tr:nth-child(even)
+        {background-color:#fff;
+        }
+
+        #t1 tr:nth-child(odd)
+        {background-color:#fff;
+        }
+
+        #t1 th
+        {color:white;
+        background-color:#119CDF;
+        }
+    </style>
+</head>
+
+<body>
+
+{%extends "adminbase.html"%}
+{%block content%}
+
+<h1 style=" color:#E3950C; font-family:Comic Sans MS; font-size:20px">
+   DOCTORS LIST
+</h1>
+
+<form action="{% url 'allclinics'%}">
+<table border="2px" align="center" cellpadding="5px" cellspacing="5px" >
+    <tr>
+        <th> ID </th>
+        <th> NAME </th>
+        <th> PASSWORD </th>
+        <th> CITY </th>
+        <th> PINCODE </th>
+        <th> TIME-IN </th>
+        <th> TIME-OUT </th>
+        <th> NO.OF DOCTORS </th>
+        <th> MOBILE </th>
+
+    </tr>
+
+    <tr>
+       <td>{{c.clinicid}}</td>
+        <td>{{c.clinicname}}</td>
+        <td>{{c.pswd}}</td>
+        <td>{{c.cityname}}</td>
+        <td>{{c.pincode}}</td>
+        <td>{{c.timein}}</td>
+        <td>{{c.timeout}}</td>
+        <td>{{c.noofdoctors}}</td>
+        <td>{{c.mobile}}</td>
+    </tr>
+</table>
+</form>
+{%endblock%}
+</body>
+</html>
