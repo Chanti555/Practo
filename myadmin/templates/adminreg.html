@@ -8,21 +8,21 @@
 <body >
 {%extends "base.html"%}
 {%block content%}
-<h1 style="background-color:#273DA4; color:#F7D504; text-align:center; font-family:cooper black; font-size:34px">
-Admin Signup Form
+<h1 style=" color:#F7D504; font-family:Comic Sans MS; font-size:20px">
+    ADMIN SIGN-UP FORM
 </h1>
-<form>
+<form action="{% url 'adminregprocess'%}">
     <table>
         <tr>
             <td>USER ID</td>
-            <td><input type="text" name="n1"/></td>
+            <td><input type="text" name="n1" required></td>
         </tr>
         <tr>
             <td>PASSWORD</td>
-            <td><input type="password" name="n2"></td>
+            <td><input type="password" name="n2" required></td>
         </tr>
         <tr>
-            <td><input type="Submit" value="SignUp" align="center"></td>
+            <td><input type="Submit" value="SignUp" ></td>
         </tr>
     </table>
 </form>

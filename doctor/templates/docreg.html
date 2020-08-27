@@ -5,119 +5,124 @@
        *{   margin:5px;     padding:5px;    }
    </style>
 </head>
+
 <body>
+
 {%extends "base.html"%}
 {%block content%}
-<h1 style="background-color:#273DA4; color:#F7D504; text-align:center; font-family:cooper black; font-size:34px">
-    Doctor Signup Form
+
+<h1 style=" color:#E3950C; font-family:Comic Sans MS; font-size:20px">
+    DOCTOR REGISTRATION FORM
 </h1>
-<form action="{% url 'docreg'%}">
+
+<form action="{% url 'docregprocess'%}">
     <table>
         <tr>
             <td>
-                Doctor ID
+                DOCTOR ID
             </td>
             <td>
-                <input type="number" name="n1">
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                Password
-            </td>
-            <td>
-                <input type="password" name="n2">
+                <input type="text" name="n1" required>
             </td>
         </tr>
 
         <tr>
             <td>
-                Name
+                PASSWORD
             </td>
             <td>
-                <input type="text" name="n3">
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                Speciality
-            </td>
-            <td>
-                <input type="text" name="n4">
+                <input type="password" name="n2" required>
             </td>
         </tr>
 
         <tr>
             <td>
-                Experience
+                NAME
             </td>
             <td>
-                <input type="number" name="n5">
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                Check-in Time
-            </td>
-            <td>
-                <input type="time" name="n6">
+                <input type="text" name="n3" required>
             </td>
         </tr>
 
         <tr>
             <td>
-                Check-out Time
+                SPECIALITY
             </td>
             <td>
-                <input type="time" name="n7">
+                <input type="text" name="n4" required>
             </td>
         </tr>
 
         <tr>
             <td>
-                Clinic Name
+                EXPERIENCE
+            </td>
+            <td>
+                <input type="text" name="n5" required>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                CHECK-IN TIME
+            </td>
+            <td>
+                <input type="time" name="n6" required>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                CHECK-OUT TIME
+            </td>
+            <td>
+                <input type="time" name="n7" required>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                CLINIC NAME
             </td>
 
             <td>
-                <select name="drop1" id="Clinics">
+                <select name="n8" id="Clinics" required>
                     <option value="1">Select Clinic</option>
-                    <option value="2">Apollo</option>
-                    <option value="3">Aster</option>
-                    <option value="4">Yashoda</option>
-                    <option value="5">KIMS</option>
-                    <option value="6">NMC</option>
-                    <option value="7">Ahli</option>
+                    <option value="2">Hamad</option>
+                    <option value="3">Apollo</option>
+                    <option value="4">Aster</option>
+                    <option value="5">Yashoda</option>
+                    <option value="6">KIMS</option>
+                    <option value="7">Naseem Al-Rabeeh</option>
+                    <option value="8">Al-Ahli</option>
                 </select>
             </td>
         </tr>
 
         <tr>
             <td>
-                Consultation Fee
+                CONSULTATION FEE
             </td>
-            <td><input type="number" name="n9"/></td>
+            <td><input type="number" name="n9" required></td>
         </tr>
 
         <tr>
             <td>
-                Mobile Number
+                MOBILE NUMBER
             </td>
-            <td><input type="text" name="n10"/></td>
+            <td><input type="text" name="n10" required></td>
         </tr>
 
         <tr>
             <td>
-                About Me
+                ABOUT ME
             </td>
-            <td><textarea rows="3" cols="15" name="Description"></textarea></td>
+            <td><textarea name="n11" rows="3" cols="15" name="Description" required></textarea></td>
         </tr>
 
         <tr>
             <td>
-                <input type="Submit" value="SignUp" align="center">
+                <input type="Submit" value="SIGNUP" align="center">
             </td>
         </tr>
 

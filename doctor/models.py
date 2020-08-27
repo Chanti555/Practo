@@ -5,14 +5,12 @@ class Doctor(models.Model):
     pswd = models.CharField(max_length=20)
     name = models.CharField(max_length=20)
     speciality = models.CharField(max_length=20)
-    exp = models.IntegerField
+    expyear = models.CharField(max_length=20)
     checkintime = models.TimeField(max_length=20)
     checkouttime = models.TimeField(max_length=10)
     clinicname = models.CharField(max_length=30)
     consultfee = models.IntegerField()
-    mobile = models.IntegerField()
-    about = models.IntegerField()
-
-
-def __str__(self):
-    return str(self.doctid)
+    mobile = models.CharField(max_length=20)
+    about = models.CharField(max_length=50)
+    def __str__(self):
+        return str(self.name)

@@ -5,20 +5,23 @@
        *{   margin:5px;     padding:5px;    }
    </style>
 </head>
+
 <body>
+
 {%extends "base.html"%}
 {%block content%}
-<h1 style="background-color:#273DA4; color:#F7D504; text-align:center; font-family:cooper black; font-size:34px">
-    Patient Details
+
+<h1 style=" color:#F6BE0E; font-family:Comic Sans MS; font-size:20px">
+    PATIENT DETAILS
 </h1>
-<form action="{% url 'patientshowprocess'%}">
+<form action="{% url 'patshowprocess'%}">
     <table>
         <tr>
             <td>
-                Enter Patient ID to show data
+                PATIENT ID
             </td>
             <td>
-                <input type="text" name="n1">
+                <input type="text" name="n1" required>
             </td>
         </tr>
         <tr>

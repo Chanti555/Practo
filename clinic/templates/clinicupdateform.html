@@ -5,29 +5,33 @@
        *{   margin:5px;     padding:5px;    }
    </style>
 </head>
-<body bgcolor="azure">
+
+<body >
+>>>>>>> cbb7ba1665af1d1e87c690f54558a71a73a56e4b
 {%extends "base.html"%}
 {%block content%}
-<h1 style="background-color:#273DA4; color:#F7D504; text-align:center; font-family:cooper black; font-size:34px">
-    Doctor Update Form
+
+<h1 style=" color:#EEB90A; font-family:Comic Sans MS; font-size:20px">
+    DOCTOR UPDATE FORM
 </h1>
+
 <form action="{% url 'cliniceditprocess'%}">
     <table>
         <tr>
             <td>
-                Enter Clinic ID to edit data
+                CLINIC ID
             </td>
         </tr>
         <tr>
             <td>
-                <input type="number" name="n1">
+                <input type="number" name="n1" required>
             </td>
         </tr>
-    </table>
-    <p>
-        <input type="Submit" value="EDIT">
-    </p>
+        <tr>
+            <input type="Submit" value="EDIT">
+        <tr>
+     </table>
 </form>
-{%endblock%}
 </body>
+{%endblock%}
 </html>

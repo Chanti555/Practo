@@ -11,8 +11,7 @@ class Patient(models.Model):
     age = models.IntegerField()
     weight = models.IntegerField()
     gender = models.CharField(max_length=10)
-    previousrecord = models.IntegerField()
-    covidsymptoms = models.IntegerField()
-
-def __str__(self):
-    return str(self.mobilenumber)
+    previousrecord = models.CharField(max_length=50)
+    covidsymptoms = models.CharField(max_length=50)
+    def __str__(self):
+        return str(self.name)

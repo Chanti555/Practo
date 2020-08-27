@@ -8,17 +8,17 @@
 <body>
 {%extends "base.html"%}
 {%block content%}
-<h1 style="background-color:#273DA4; color:#F7D504; text-align:center; font-family:cooper black; font-size:34px">
-    Patient Signup Form
+<h1 style=" color:#F6BE0E; font-family:Comic Sans MS; font-size:20px">
+    PATIENT REGISTRATION FORM
 </h1>
-<form>
+<form action="{% url 'patregprocess'%}">
     <table>
         <tr>
             <td>
                 NAME
             </td>
             <td>
-                <input type="text" name="n1">
+                <input type="text" name="n1" required>
             </td>
         </tr>
 
@@ -27,7 +27,7 @@
                 PASSWORD
             </td>
             <td>
-                <input type="password" name="n2">
+                <input type="password" name="n2" required>
             </td>
         </tr>
 
@@ -36,7 +36,7 @@
                  MOBILE NUMBER
              </td>
              <td>
-                <input type="number" name="n3">
+                <input type="number" name="n3" required>
              </td>
         </tr>
 
@@ -45,7 +45,7 @@
                 DISEASE
             </td>
             <td>
-                <input type="text" name="n4">
+                <input type="text" name="n4" required>
             </td>
         </tr>
 
@@ -54,7 +54,7 @@
                 SYMPTOMS
             </td>
             <td>
-                <textarea rows="3" cols=10" name="Description"></textarea>
+                <textarea rows="3" cols=10" name="Description" required></textarea>
             </td>
         </tr>
 
@@ -63,7 +63,7 @@
                 AGE
             </td>
             <td>
-                <input type="number" name="n6">
+                <input type="number" name="n6" required>
             </td>
         </tr>
 
@@ -72,7 +72,7 @@
                 WEIGHT(in kg)
             </td>
             <td>
-                <input type="number" name="n7">
+                <input type="number" name="n7" required>
             </td>
         </tr>
 
@@ -81,7 +81,8 @@
                 GENDER
             </td>
             <td>
-                <input type="text" name="n8">
+                <input type="radio" name="n8" value="Male" required>Male
+                <input type="radio" name="n9" value="Female" required>Female
             </td>
         </tr>
 
@@ -90,13 +91,13 @@
                 COVID-19 SYMPTOMS
             </td>
             <td>
-                <textarea rows="3" cols="10" name="Description"></textarea>
+                <textarea rows="3" cols="10" name="Description" required></textarea>
             </td>
         </tr>
 
         <tr>
             <td>
-                <input type="Submit" value="SignUp" align="center">
+                <input type="Submit" value="SIGNUP">
             </td>
         </tr>
 

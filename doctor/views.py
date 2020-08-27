@@ -5,20 +5,14 @@ from doctor.models import Doctor
 def home(request):
     return render(request, 'home.html')
 
-def doctloginform(request):
-    return render(request,'doclogin.html')
-
-def doctshowform(request):
+def docshowform(request):
     return render(request,'docshowform.html')
 
 def docreg(request):
     return render(request, 'docreg.html')
 
-def doclogin(request):
+def docloginform(request):
     return render(request, 'doclogin.html')
-
-def docshowform(request):
-    return render(request, 'docshowform.html')
 
 def searchdoc(request):
     return render(request, 'searchdoc.html')
@@ -34,7 +28,7 @@ def docregprocess(request):
     pswd=request.GET.get('n2')
     name=request.GET.get('n3')
     speciality=request.GET.get('n4')
-    exp=request.GET.get('n5')
+    expyear=request.GET.get('n5')
     checkintime=request.GET.get('n6')
     checkouttime=request.GET.get('n7')
     clinicname=request.GET.get('n8')
@@ -46,11 +40,11 @@ def docregprocess(request):
        rec=Doctor.objects.get(doctid=docID)
        return render(request,'docregerror.html')
     except ObjectDoesNotExist:
-        d1=Doctor(docID,pswd,name,speciality,exp,checkintime,checkouttime,clinicname,consultfee,mobile,about)
+        d1=Doctor(doctid=docID,pswd=pswd,name=name,speciality=speciality,expyear=expyear,checkintime=checkintime,checkouttime=checkouttime,clinicname=clinicname,consultfee=consultfee,mobile=mobile,about=about)
         d1.save()
         return render(request,'docregsuccess.html')
 
-def doctshowprocess(request):
+def docshowprocess(request):
     docid=request.GET.get('n1')
 
     try:
@@ -59,7 +53,7 @@ def doctshowprocess(request):
     except ObjectDoesNotExist:
         return render(request,'docnotfound.html')
 
-def doctlogin(request):
+def doclogin(request):
     docid=request.GET.get('n1')
     pswd=request.GET.get('n2')
 
@@ -73,7 +67,7 @@ def displayalldoctors(request):
     doc=Doctor.objects.all()
     return render(request,"showalldoc.html",{'docs':doc})
 
-def dispdoctbyname(request):
+def dispdocbyname(request):
     docname=request.GET.get('n3')
 
     try:
@@ -82,7 +76,7 @@ def dispdoctbyname(request):
     except ObjectDoesNotExist:
         return render(request,'docnotfound.html')
 
-def dispdoctbyclinic(request):
+def dispdocbyclinic(request):
     docclinic=request.GET.get('n8')
 
     try:
@@ -91,7 +85,7 @@ def dispdoctbyclinic(request):
     except ObjectDoesNotExist:
         return render(request,'docnotfound.html')
 
-def docteditprocess(request):
+def doceditprocess(request):
     docid = request.GET.get('n1')
 
     try:
@@ -100,7 +94,7 @@ def docteditprocess(request):
     except ObjectDoesNotExist:
         return render(request,'docnotfound.html')
 
-def doctupdate(request):
+def docupdate(request):
     docID = request.GET.get('n1')
     newpswd = request.GET.get('n2')
     newname = request.GET.get('n3')
@@ -117,7 +111,7 @@ def doctupdate(request):
     d.pswd=newpswd
     d.name=newname
     d.speciality = newspeciality
-    d.exp = newexp
+    d.expyear = newexp
     d.checkintime = newcheckintime
     d.checkouttime = newcheckouttime
     d.consultfee = newconsultfee
@@ -127,7 +121,7 @@ def doctupdate(request):
     d.save()
     return render(request,"doctupdatesuccess.html")
 
-def doctdelete(request):
+def docdelete(request):
     docID=request.GET.get('n1')
 
     try:

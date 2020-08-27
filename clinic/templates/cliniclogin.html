@@ -5,35 +5,42 @@
        *{   margin:5px;     padding:5px;    }
    </style>
 </head>
+<<<<<<< HEAD
 <body bgcolor="azure">
+=======
+
+<body>
+
+>>>>>>> 46be2eb903c0573064d48062aef84fa49b66a6c2
 {%extends "base.html"%}
 {%block content%}
-<form>
-<h1 style="background-color:#273DA4; color:#F7D504; text-align:center; font-family:cooper black; font-size:34px">
-    Clinic Signin Form
+
+<form action="{% url 'cliniclogin'%}">
+<h1 style=" color:#EEB90A; font-family:Comic Sans MS; font-size:20px">
+    CLINIC SIGNIN FORM
 </h1>
     <table>
         <tr>
            <td>
-                Clinic ID
+                CLINIC ID
             </td>
             <td>
-                <input type="number" name="n1">
+                <input type="number" name="n1" required>
             </td>
         </tr>
 
         <tr>
              <td>
-                Password
+                PASSWORD
             </td>
             <td>
-                <input type="password" name="n2">
+                <input type="password" name="n2" required>
             </td>
         </tr>
 
         <tr>
             <td>
-                <input type="Submit" value=SignUp>
+                <input type="Submit" value=SIGNUP>
             </td>
         </tr>
     </table>
