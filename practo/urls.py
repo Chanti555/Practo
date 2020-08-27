@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.conf.urls import url
-from .views import *
+from practo.views import *
 from myadmin.views import *
 from clinic.views import *
 from covid.views import *
@@ -53,7 +53,7 @@ urlpatterns = [
     url(r'clinicdelete/', clinicdelete, name='clinicdelete'),
     url(r'displayallclinics/', displayallclinics, name='displayallclinics'),
     url(r'dispclinicbycity/', dispclinicbycity, name='dispclinicbycity'),
-    url(r'dispclinicbycity/', dispclinicbycity, name='dispclinicbycity'),
+
 
     url(r'covid/', covid, name='covid'),
 

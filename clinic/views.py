@@ -2,9 +2,6 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import render
 from clinic.models import Clinic
 
-def home(request):
-    return render(request, 'home.html')
-
 def clinicreg(request):
     return render(request, 'clinicreg.html')
 

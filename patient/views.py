@@ -2,9 +2,6 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import render
 from patient.models import Patient
 
-def home(request):
-    return render(request,'home.html')
-
 def patreg(request):
     return render(request,'patientreg.html')
 
