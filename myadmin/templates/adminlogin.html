@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+       *{   margin:5px;     padding:5px;    }
+   </style>
+</head>
+<body>
+{%extends "base.html"%}
+{%block content%}
+
+<h1 style=" color:#E3950C; font-family:Comic Sans MS; font-size:20px">
+    DOCTOR SIGNIN FORM
+</h1>
+
+<form action="{% url 'doclogin'%}">
+    <table>
+        <tr>
+           <td>
+                DOCTOR ID
+            </td>
+            <td>
+                <input type="number" name="n1" required>
+            </td>
+        </tr>
+
+        <tr>
+             <td>
+                PASSWORD
+            </td>
+            <td>
+                <input type="password" name="n2" required>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="Submit" value=SIGNUP>
+            </td>
+        </tr>
+    </table>
+</form>
+{%endblock%}
+</body>
+</html>
