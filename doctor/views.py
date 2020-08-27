@@ -35,11 +35,11 @@ def docregprocess(request):
 
     try:
        rec=Doctor.objects.get(doctid=docID)
-       return render(request,'adminregerror.html')
+       return render(request,'doctorregerror.html')
     except ObjectDoesNotExist:
         d1=Doctor(doctid=docID,pswd=pswd,name=name,speciality=speciality,expyear=expyear,checkintime=checkintime,checkouttime=checkouttime,clinicname=clinicname,consultfee=consultfee,mobile=mobile,about=about)
         d1.save()
-        return render(request,'adminregsuccess.html')
+        return render(request,'doctorregsuccess.html')
 
 def docshowprocess(request):
     docid=request.GET.get('n1')
@@ -56,9 +56,9 @@ def doclogin(request):
 
     try:
        doc=Doctor.objects.get(doctid=docid,pswd=pswd)
-       return render(request,'patientloginsuccess.html')
+       return render(request,'clinicloginsuccess.html')
     except ObjectDoesNotExist:
-        return render(request,'patientloginerror.html')
+        return render(request,'clinicloginerror.html')
 
 def displayalldoctors(request):
     doc=Doctor.objects.all()

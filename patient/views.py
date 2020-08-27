@@ -29,11 +29,11 @@ def patregprocess(request):
 
     try:
        rec=Patient.objects.get(patid=patID)
-       return render(request,'patregerror.html')
+       return render(request,'clinicregerror.html')
     except ObjectDoesNotExist:
         p1=Patient(patid=patID,name=name,pswd=pswd,mobile=mobile,disease=disease,symptoms=symptoms,age=age,weight=weight,gender=gender,previousrecord=previousrecord,covidsymptoms=covidsymptoms)
         p1.save()
-        return render(request,'patientregsuccess.html')
+        return render(request,'clinicregsuccess.html')
 
 def patshowprocess(request):
     patid=request.GET.get('n1')
@@ -50,9 +50,9 @@ def patloginprocess(request):
 
     try:
        pat=Patient.objects.get(name=patname,pswd=pswd)
-       return render(request,'patientloginsuccess.html')
+       return render(request,'clinicloginsuccess.html')
     except ObjectDoesNotExist:
-        return render(request,'patientloginerror.html')
+        return render(request,'clinicloginerror.html')
 
 def displayallpatients(request):
     pat=Patient.objects.all()
