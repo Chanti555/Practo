@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{%extends "base.html"%}
+{%block content%}
+<h1 style=" color:green; font-family:Comic Sans MS; font-size:20px">{{emp.eid}} details are and you can modify details now:</h1>
+<form action = "{% url 'docupdate' %}">
+<table border="2px" align="center" cellpadding="5px" cellspacing="5px" >
+    <tr>
+        <th>DOCTOR ID</th><th>Password</th><th>DOCTOR NAME</th><th>SPECIALITY</th><th>EXPERIENCE</th><th>CHECK IN TIME</th><th>CHECK OUT TIME</th><th>CLINIC NAME</th><th>CONSULTATION FEE</th><th>MOBILE NUMBER</th><th>ABOUT DOCTOR</th>
+    </tr>
+    <tr>
+        <td>
+            <input type = "text" name = "n1" value = "{{d.docid}}" readonly>
+        </td>
+        <td>
+            <input type = "text" name = "n2" value = "{{d.pswd}}">
+        </td>
+        <td>
+            <input type = "text" name = "n3" value = "{{d.name}}">
+        </td>
+        <td>
+            <input type = "text" name = "n4" value = "{{d.speciality}}">
+        </td>
+        <td>
+            <input type = "text" name = "n5" value = "{{d.exp}}">
+        </td>
+        <td>
+            <input type = "text" name = "n6" value = "{{d.checkin}}">
+        </td>
+        <td>
+            <input type = "text" name = "n7" value = "{{d.checkout}}">
+        </td>
+        <td>
+            <input type = "text" name = "n8" value = "{{d.clinicname}}">
+        </td>
+        <td>
+            <input type = "text" name = "n9" value = "{{d.consultationfee}}">
+        </td>
+        <td>
+            <input type = "text" name = "n10" value = "{{d.mobileno}}">
+        </td>
+        <td>
+            <input type = "text" name = "n11" value = "{{d.aboutdoc}}">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type = "submit" value = "Update">
+        </td>
+    </tr>
+</table>
+</form>
+{%endblock%}
+</body>
+</html>

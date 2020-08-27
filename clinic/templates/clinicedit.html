@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>{{emp.eid}} details are and you can modify details now:</h1>
+<form action = "{% url 'updateemp' %}">
+<table border="2px" align="center" cellpadding="5px" cellspacing="5px" >
+    <tr>
+        <th>EMPID</th><th>Password</th><th>Name</th><th>Salary</th><th>City</th>
+    </tr>
+    <tr>
+        <td>
+            <input type = "text" name = "n1" value = "{{emp.eid}}" readonly>
+        </td>
+        <td>
+            <input type = "text" name = "n2" value = "{{emp.pswd}}">
+        </td>
+        <td>
+            <input type = "text" name = "n3" value = "{{emp.name}}">
+        </td>
+        <td>
+            <input type = "text" name = "n4" value = "{{emp.salary}}">
+        </td>
+        <td>
+            <input type = "text" name = "n5" value = "{{emp.city}}">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type = "submit" value = "Update">
+        </td>
+    </tr>
+</table>
+</form>
+<a href="{% url 'home'%}">home</a>
+</body>
+</html>
