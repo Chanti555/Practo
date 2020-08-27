@@ -42,7 +42,7 @@ def patshowprocess(request):
        pat=Patient.objects.get(patid=patid)
        return render(request,"showpatient.html",{'pats':pat})
     except ObjectDoesNotExist:
-        return render(request,'patientnotfound.html')
+        return render(request,'docnotfound.html')
 
 def patloginprocess(request):
     patname=request.GET.get('n2')
@@ -65,7 +65,7 @@ def pateditprocess(request):
        pat=Patient.objects.get(name=patname)
        return render(request,"patientedit.html",{'pats':pat})
     except ObjectDoesNotExist:
-        return render(request,'patientnotfound.html')
+        return render(request,'docnotfound.html')
 
 def patupdate(request):
     patID=request.GET.get('n1')

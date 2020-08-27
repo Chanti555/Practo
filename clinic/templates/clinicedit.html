@@ -5,27 +5,41 @@
     <title>Title</title>
 </head>
 <body>
+{%extends "base.html"%}
+{%block content%}
 <h1>{{emp.eid}} details are and you can modify details now:</h1>
-<form action = "{% url 'updateemp' %}">
+<form action = "{% url 'updateclinic' %}">
 <table border="2px" align="center" cellpadding="5px" cellspacing="5px" >
     <tr>
-        <th>EMPID</th><th>Password</th><th>Name</th><th>Salary</th><th>City</th>
+        <th>CLINIC ID</th><th>Password</th><th>CLINIC NAME</th><th>CITY</th><th>PINCODE</th><th>CHECK IN TIME</th><th>CHECK OUT TIME</th><th>MOBILE NUMBER</th><th>NUMBER OF DOCTORS</th>
     </tr>
     <tr>
         <td>
-            <input type = "text" name = "n1" value = "{{emp.eid}}" readonly>
+            <input type = "number" name = "n1" value = "{{c.clinicid}}" readonly>
         </td>
         <td>
-            <input type = "text" name = "n2" value = "{{emp.pswd}}">
+            <input type = "text" name = "n2" value = "{{c.pswd}}">
         </td>
         <td>
-            <input type = "text" name = "n3" value = "{{emp.name}}">
+            <input type = "text" name = "n3" value = "{{c.name}}">
         </td>
         <td>
-            <input type = "text" name = "n4" value = "{{emp.salary}}">
+            <input type = "text" name = "n4" value = "{{c.city}}">
         </td>
         <td>
-            <input type = "text" name = "n5" value = "{{emp.city}}">
+            <input type = "number" name = "n5" value = "{{c.pincode}}">
+        </td>
+         <td>
+            <input type = "time" name = "n6" value = "{{c.checkin}}">
+        </td>
+         <td>
+            <input type = "time" name = "n7" value = "{{c.checkout}}">
+        </td>
+         <td>
+            <input type = "number" name = "n8" value = "{{c.mobilenumber}}">
+        </td>
+         <td>
+            <input type = "number" name = "n9" value = "{{c.numofdoctors}}">
         </td>
     </tr>
     <tr>
@@ -35,6 +49,6 @@
     </tr>
 </table>
 </form>
-<a href="{% url 'home'%}">home</a>
+{%endblock%}
 </body>
 </html>

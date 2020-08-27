@@ -37,6 +37,6 @@ def admindelete(request):
     try:
         a=Myadmin.objects.get(adminID=adminID)
         a.delete()
-        return render(request,'admindeletesuccess.html')
+        return render(request,'docdeletesuccess.html')
     except ObjectDoesNotExist:
-        return render(request,'adminnotfound.html')
+        return render(request,'docnotfound.html')
