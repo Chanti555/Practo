@@ -25,7 +25,7 @@ def docregprocess(request):
     pswd=request.GET.get('n2')
     name=request.GET.get('n3')
     speciality=request.GET.get('n4')
-    exp=request.GET.get('n5')
+    expyear=request.GET.get('n5')
     checkintime=request.GET.get('n6')
     checkouttime=request.GET.get('n7')
     clinicname=request.GET.get('n8')
@@ -37,7 +37,7 @@ def docregprocess(request):
        rec=Doctor.objects.get(doctid=docID)
        return render(request,'docregerror.html')
     except ObjectDoesNotExist:
-        d1=Doctor(docID,pswd,name,speciality,exp,checkintime,checkouttime,clinicname,consultfee,mobile,about)
+        d1=Doctor(doctid=docID,pswd=pswd,name=name,speciality=speciality,expyear=expyear,checkintime=checkintime,checkouttime=checkouttime,clinicname=clinicname,consultfee=consultfee,mobile=mobile,about=about)
         d1.save()
         return render(request,'docregsuccess.html')
 
@@ -108,7 +108,7 @@ def docupdate(request):
     d.pswd=newpswd
     d.name=newname
     d.speciality = newspeciality
-    d.exp = newexp
+    d.expyear = newexp
     d.checkintime = newcheckintime
     d.checkouttime = newcheckouttime
     d.consultfee = newconsultfee

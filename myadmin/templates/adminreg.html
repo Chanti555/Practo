@@ -5,13 +5,16 @@
        *{   margin:5px;     padding:5px;    }
    </style>
 </head>
-<body >
+
+<body>
+
 {%extends "base.html"%}
 {%block content%}
+
 <h1 style=" color:#F7D504; font-family:Comic Sans MS; font-size:20px">
     ADMIN SIGN-UP FORM
 </h1>
-<form action="{% url 'adminreg'%}">
+<form action="{% url 'adminregprocess'%}">
     <table>
         <tr>
             <td>USER ID</td>
@@ -26,6 +29,7 @@
         </tr>
     </table>
 </form>
+
 {%endblock%}
 </body>
 </html>

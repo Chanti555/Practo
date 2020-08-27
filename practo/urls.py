@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.conf.urls import url
-from practo.views import *
+from .views import home
 from myadmin.views import *
 from clinic.views import *
 from covid.views import *
@@ -9,10 +9,15 @@ from patient.views import *
 
 urlpatterns = [
     url('admin/', admin.site.urls),
-    url(r'^$/', home),
+    url(r'^$', home),
     url(r'home/', home, name='home'),
 
     url(r'adminreg/', adminreg, name='adminreg'),
+    url(r'adminregprocess/', adminregprocess, name='adminregprocess'),
+
+    url(r'alldoctors/', alldoctors, name='alldoctors'),
+    url(r'allpatients/', allpatients, name='allpatients'),
+    url(r'allclinics/', allclinics, name='allclinics'),
 
     url(r'docreg/', docreg, name='docreg'),
     url(r'docregprocess/', docregprocess, name='docregprocess'),

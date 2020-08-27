@@ -7,9 +7,17 @@
 
 <body>
 
+{%extends "adminbase.html"%}
+{%block content%}
+
 <h1 style=" color:green; font-family:Comic Sans MS; font-size:20px">
-    LOGIN SUCCESSFUL
+    ADMIN LOGIN SUCCESSFUL
 </h1>
 
+<h1 style=" color:blue; font-family:corbel; font-size:20px">
+    <a href="{% url 'home'%}">LOGOUT</a>
+</h1>
+
+{%endblock%}
 </body>
 </html>

@@ -35,7 +35,7 @@ def clinicregprocess(request):
        rec=Clinic.objects.get(clinicid=clinicID)
        return render(request,'clinicregerror.html')
     except ObjectDoesNotExist:
-        c1=Clinic(clinicID,pswd,clinicname,cityname,pincode,timein,timeout,mobile,noofdoctors)
+        c1=Clinic(clinicid=clinicID,pswd=pswd,clinicname=clinicname,cityname=cityname,pincode=pincode,timein=timein,timeout=timeout,mobile=mobile,noofdoctors=noofdoctors)
         c1.save()
         return render(request,'clinicregsuccess.html')
 
